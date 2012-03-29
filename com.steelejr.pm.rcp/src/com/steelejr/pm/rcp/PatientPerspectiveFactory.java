@@ -2,6 +2,7 @@ package com.steelejr.pm.rcp;
 
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
+import org.eclipse.ui.IPlaceholderFolderLayout;
 
 public class PatientPerspectiveFactory implements IPerspectiveFactory {
 	
@@ -10,8 +11,12 @@ public class PatientPerspectiveFactory implements IPerspectiveFactory {
 	public void createInitialLayout(IPageLayout layout) {
 		layout.setEditorAreaVisible(true);
 		
-		layout.addView(IPageLayout.ID_PROP_SHEET, IPageLayout.BOTTOM, 0.25f, layout.getEditorArea());
-		//layout.addView(PatientNavView.ID, IPageLayout.LEFT, 0.5f, layout.getEditorArea());
-		//layout.addShowViewShortcut(PatientNavView.ID);
+		layout.createPlaceholderFolder("topLeft", IPageLayout.LEFT, 0.25f, layout.getEditorArea());
+		IPlaceholderFolderLayout leftPlaceholder = layout.createPlaceholderFolder("bottomLeft", IPageLayout.BOTTOM, 0.6f, "topLeft");
+		leftPlaceholder.addPlaceholder(IPageLayout.ID_OUTLINE);
+		
+		IPlaceholderFolderLayout rightPlaceholder = layout.createPlaceholderFolder("bottomRight", IPageLayout.BOTTOM, 0.6f, layout.getEditorArea()); 
+		rightPlaceholder.addPlaceholder(IPageLayout.ID_PROP_SHEET);
+		layout.addShowViewShortcut(IPageLayout.ID_PROP_SHEET);
 	}
 }

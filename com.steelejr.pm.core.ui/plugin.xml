@@ -36,9 +36,9 @@
                id="com.steelejr.pm.core.ui.views.patientNavView"
                minimized="false"
                moveable="true"
-               ratio="0.25f"
-               relationship="left"
-               relative="org.eclipse.ui.editorss"
+               ratio="0.2f"
+               relationship="stack"
+               relative="topLeft"
                showTitle="true"
                standalone="false"
                visible="true">

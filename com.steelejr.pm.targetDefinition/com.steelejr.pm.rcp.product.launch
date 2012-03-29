@@ -8,7 +8,7 @@
 <stringAttribute key="checked" value="[NONE]"/>
 <booleanAttribute key="clearConfig" value="false"/>
 <booleanAttribute key="clearws" value="true"/>
-<booleanAttribute key="clearwslog" value="true"/>
+<booleanAttribute key="clearwslog" value="false"/>
 <stringAttribute key="configLocation" value=""/>
 <booleanAttribute key="default" value="false"/>
 <booleanAttribute key="includeOptional" value="false"/>
