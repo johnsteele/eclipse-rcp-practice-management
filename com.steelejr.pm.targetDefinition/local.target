@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="build" sequenceNumber="7">
+<target name="build" sequenceNumber="9">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="3.7.2.M20120208-0800"/>
@@ -24,6 +24,6 @@
 <unit id="org.eclipse.releng.tools.feature.group" version="3.4.101.r37x_v20111117-4507s482aw31221929"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.7/"/>
 </location>
-<location path="${project_loc}" type="Directory"/>
+<location path="${project_loc:/com.steelejr.pm.targetDefinition}" type="Directory"/>
 </locations>
 </target>
