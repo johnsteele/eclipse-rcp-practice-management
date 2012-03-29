@@ -7,6 +7,8 @@ import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.jdbc.DataSourceFactory;
 import org.osgi.util.tracker.ServiceTracker;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.steelejr.pm.dbaccess.internal.DatabaseConnectionService;
 
@@ -14,6 +16,8 @@ import com.steelejr.pm.dbaccess.internal.DatabaseConnectionService;
  * The activator class controls the plug-in life cycle
  */
 public class Activator implements BundleActivator {
+	
+	private Logger log = LoggerFactory.getLogger(getClass());
 	
 	public static final String EMBEDDED_DERBY_DRIVER_NAME = "org.apache.derby.jdbc.EmbeddedDriver";
 	public static final String JDBC_4_VERSION = "4.0";

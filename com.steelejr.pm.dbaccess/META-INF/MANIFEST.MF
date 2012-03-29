@@ -7,7 +7,8 @@ Bundle-Activator: com.steelejr.pm.dbaccess.Activator
 Bundle-Vendor: STEELEJR
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- osgi.enterprise;bundle-version="4.2.0"
+ osgi.enterprise;bundle-version="4.2.0",
+ slf4j.api;bundle-version="1.6.4"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: com.steelejr.pm.dbaccess

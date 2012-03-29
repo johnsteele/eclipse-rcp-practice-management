@@ -3,34 +3,39 @@ package com.steelejr.pm.core.ui.datasource;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.steelejr.pm.dbaccess.IDatabaseConnectionService;
 
 public class Database {
 	
+	private Logger log = LoggerFactory.getLogger(getClass());
+	
 	private IDatabaseConnectionService connectionService;
 	
 	public synchronized void setConnection (IDatabaseConnectionService connectionService) {
-		System.out.println("Database Connection Set");
+		log.debug("Database Connection Set");
 		this.connectionService = connectionService;
 		DatabaseMetaData metadata;
 		try {
 			metadata = connectionService.getConnection().getMetaData();
-			System.out.println("Database is: " + metadata.getDriverName());
+			log.debug("Database is: " + metadata.getDriverName());
 		} catch (SQLException sqlEx) {
-			System.out.println("Unable to get metadata " + sqlEx);
+			log.error("Unable to get metadata " + sqlEx);
 		}
 	}
 	
 	// Called by DS when connection service disappears. 
 	public synchronized void releaseConnection (IDatabaseConnectionService connection) {
-		System.out.println("Releasing connection");
+		log.debug("Releasing connection");
 	}
 	
 	public void startup () {
-		System.out.println("Startup");
+		log.debug("Startup");
 	}
 	
 	public void shutdown () {
-		System.out.println("Shutdown");
+		log.debug("Shutdown");
 	}
 }
