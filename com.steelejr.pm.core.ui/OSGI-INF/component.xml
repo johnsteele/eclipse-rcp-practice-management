@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="com.steelejr.pm.core.ui">
+   <implementation class="com.steelejr.pm.core.ui.datasource.Database"/>
+   <reference bind="setConnection" cardinality="0..1" interface="com.steelejr.pm.dbaccess.IDatabaseConnectionService" name="IDatabaseConnectionService" policy="dynamic" unbind="releaseConnection"/>
+</scr:component>

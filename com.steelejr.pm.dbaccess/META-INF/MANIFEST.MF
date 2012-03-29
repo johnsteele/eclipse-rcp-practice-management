@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dbaccess
+Bundle-SymbolicName: com.steelejr.pm.dbaccess
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.steelejr.pm.dbaccess.Activator
+Bundle-Vendor: STEELEJR
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ osgi.enterprise;bundle-version="4.2.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.steelejr.pm.dbaccess

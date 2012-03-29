@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.steelejr.pm.core.ui.editors.PatientEditor"
+            default="false"
+            icon="icons/person.gif"
+            id="com.steelejr.pm.core.ui.editors.patientEditor"
+            name="Patient Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.steelejr.pm.core.ui.patientCategory"
+            name="Patients">
+      </category>
+      <view
+            allowMultiple="false"
+            category="com.steelejr.pm.core.ui.patientCategory"
+            class="com.steelejr.pm.core.ui.views.PatientNavView"
+            icon="icons/patients.gif"
+            id="com.steelejr.pm.core.ui.views.patientNavView"
+            name="Patients"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.steelejr.pm.rcp.patient.perspective">
+         <view
+               closeable="true"
+               id="com.steelejr.pm.core.ui.views.patientNavView"
+               minimized="false"
+               moveable="true"
+               ratio="0.25f"
+               relationship="left"
+               relative="org.eclipse.ui.editorss"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+         <viewShortcut
+               id="com.steelejr.pm.core.ui.views.patientNavView">
+         </viewShortcut>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>
