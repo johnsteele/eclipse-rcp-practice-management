@@ -38,11 +38,4 @@
          version="1.0.0"
          unpack="false"/>
 
-   <plugin
-         id="com.steelejr.pm.rcp"
-         download-size="0"
-         install-size="0"
-         version="1.0.0"
-         unpack="false"/>
-
 </feature>
