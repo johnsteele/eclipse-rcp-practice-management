@@ -17,6 +17,5 @@ public class PatientPerspectiveFactory implements IPerspectiveFactory {
 		
 		IPlaceholderFolderLayout rightPlaceholder = layout.createPlaceholderFolder("bottomRight", IPageLayout.BOTTOM, 0.6f, layout.getEditorArea()); 
 		rightPlaceholder.addPlaceholder(IPageLayout.ID_PROP_SHEET);
-		layout.addShowViewShortcut(IPageLayout.ID_PROP_SHEET);
 	}
 }
