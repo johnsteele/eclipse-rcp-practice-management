@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Monitoring
+Bundle-SymbolicName: com.steelejr.pm.web.monitoring
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.steelejr.pm.web.monitoring.Activator
+Bundle-Vendor: STEELEJR
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
